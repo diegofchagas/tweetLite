@@ -6,10 +6,14 @@ function App() {
   return <>
   <Header/>
 
-  <div>
-    <aside>
+  <div className="wrapper">
+    <aside >
       <SideBar/>
     </aside>
+
+    <main>
+    oi
+    </main>
   </div>
   </>;
 }
