@@ -4,6 +4,7 @@ import * as S from "./styles";
 export const Post = () => {
   return (
     <S.ContainerBox>
+      {/* //olhar tag article */}
       <header>
         <div className="card-profile">
           <Avatar src="https://github.com/diegofchagas.png" />
@@ -12,9 +13,12 @@ export const Post = () => {
             <span>Desenvoledor Full Stack</span>
           </div>
         </div>
-        <time title="11 de janeiro às 16:00h" dateTime="2024-01-17 16:00:00"> Públicado há 1h</time>
+        <time title="11 de janeiro às 16:00h" dateTime="2024-01-17 16:00:00">
+          {" "}
+          Públicado há 1h
+        </time>
       </header>
-      
+
       <S.ContentPost>
         <p>Fala galeraa 👋</p>
         <p>
@@ -39,8 +43,11 @@ export const Post = () => {
 
       <S.FormComment>
         <p>Deixe seu feedback</p>
-        <textarea name="" id="" placeholder="Escreva um comenário"></textarea>
-        <button>Publicar</button>
+        <textarea name="" placeholder="Escreva um comenário" />
+
+        <footer>
+        <button type="submit">Publicar</button>
+        </footer>
       </S.FormComment>
     </S.ContainerBox>
   );
