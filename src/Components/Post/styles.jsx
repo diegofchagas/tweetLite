@@ -87,7 +87,8 @@ export const FormComment = styled.form`
     background-color: #121214;
     resize: none;
     border: none;
-    padding: 0.813rem 32rem 3.813rem 1rem;
+    padding:1rem;
+    height:6rem;
     border-radius: 8px;
     color: #c4c4cc;
     font-size: 1rem;
