@@ -1,4 +1,5 @@
 import { Avatar } from "../Avatar";
+import { Comment } from "../Comment";
 import * as S from "./styles";
 
 export const Post = () => {
@@ -7,7 +8,7 @@ export const Post = () => {
       {/* //olhar tag article */}
       <header>
         <div className="card-profile">
-          <Avatar src="https://github.com/diegofchagas.png" />
+          <Avatar src="https://github.com/diegofchagas.png" hasBorder/>
           <div>
             <strong>Diego Chagas</strong>
             <span>Desenvoledor Full Stack</span>
@@ -49,6 +50,12 @@ export const Post = () => {
         <button type="submit">Publicar</button>
         </footer>
       </S.FormComment>
+
+      <div>
+        <Comment/>
+        <Comment/>
+        <Comment/>
+      </div>
     </S.ContainerBox>
   );
 };
