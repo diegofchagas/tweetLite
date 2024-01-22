@@ -43,20 +43,14 @@ export const ContentPost = styled.div`
   margin-top: 1.875rem;
   line-height: 1.6;
   color: #c4c4cc;
-  font-weight: 400;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
 
   p {
     margin-top: 1rem;
-  }
-
-  ul {
-    display: flex;
-    gap: 8px;
-  }
-
-  li {
-    margin-top: 1rem;
-    list-style-type: none;
   }
 
   a {
