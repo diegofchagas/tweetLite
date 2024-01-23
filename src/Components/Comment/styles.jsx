@@ -28,6 +28,10 @@ export const BoxContainer = styled.div`
     align-items: center;
   }
 
+  footer .color-text{
+  color:#00B37E
+  }
+
   footer button:active{
     color:#00B37E;
   }

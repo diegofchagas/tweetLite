@@ -10,6 +10,7 @@ import * as S from "./styles";
 
 export const Comment = ({content, onDeleteComment}) => {
   const [likeCount, setLikeCount] = useState(0)
+ 
 
   const currentDate = new Date();
   const publishedCommentDate = format(currentDate,"dd 'de' MMMM 'às' HH:mm'h'",{locale:ptBR})
@@ -37,7 +38,7 @@ export const Comment = ({content, onDeleteComment}) => {
         </S.CommentContent>
 
         <footer>
-          <button onClick={handleLikerCounter}>
+          <button onClick={handleLikerCounter} className={likeCount > 0 ? 'color-text' : ''}>
             <ThumbsUp size={20}/>
             Aplaudir <small>{likeCount}</small>
           </button>
