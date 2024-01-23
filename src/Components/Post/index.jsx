@@ -7,11 +7,14 @@ import { format, formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
 import * as S from "./styles";
+import { Modal } from "../Modal";
 
 
 export const Post = ({ author, content, publishedAt }) => {
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState("");
+  const [open, setOpen] = useState(false);
+  const [toBeDeleted, setToBeDeleted] = useState(null);
 
   const publishedDateFormated = format(
     publishedAt,
@@ -31,9 +34,16 @@ export const Post = ({ author, content, publishedAt }) => {
   };
 
   const deleteComments = (id)=>{
-    let commentsWithOutDelete = comments.filter(comment => comment.id !== id)
-    setComments(commentsWithOutDelete)
+    setToBeDeleted(id);
+    setOpen(true);
   }
+
+  const confirmDelete = () => {
+    let commentsWithOutDelete = comments.filter(comment => comment.id !== toBeDeleted)
+    setComments(commentsWithOutDelete);
+    setOpen(false);
+  }
+
 
   const isNewCommentEmpty = commentText.length > 0 &&  commentText.trim().length === 0
 
@@ -113,9 +123,11 @@ export const Post = ({ author, content, publishedAt }) => {
           key={comment.id} 
           content={comment.newComment}
           onDeleteComment={()=>deleteComments(comment.id)}
+
           /> )
         }
       </div>
+      <Modal isOpen={open} onConfirm={confirmDelete} onCancel={()=> setOpen(false)}/>
     </S.ContainerBox>
   );
 };
