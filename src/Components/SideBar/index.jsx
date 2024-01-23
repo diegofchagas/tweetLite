@@ -1,6 +1,6 @@
 import { Avatar } from "../Avatar";
-import * as S from "./styles";
 import { PencilSimpleLine } from "@phosphor-icons/react";
+import * as S from "./styles";
 
 export const SideBar = () => {
   return (

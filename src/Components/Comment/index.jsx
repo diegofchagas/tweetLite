@@ -1,8 +1,23 @@
+import { useState } from "react";
 import { Avatar } from "../Avatar";
+
+import { format } from "date-fns";
+import {ptBR} from  "date-fns/locale"
+
 import { Trash, ThumbsUp } from "@phosphor-icons/react";
+
 import * as S from "./styles";
 
-export const Comment = () => {
+export const Comment = ({content, onDeleteComment}) => {
+  const [likeCount, setLikeCount] = useState(0)
+
+  const currentDate = new Date();
+  const publishedCommentDate = format(currentDate,"dd 'de' MMMM 'às' HH:mm'h'",{locale:ptBR})
+
+  const handleLikerCounter = ()=>{
+    setLikeCount((prevLikeCount)=> prevLikeCount + 1)
+  }
+
   return (
     <S.CoomentContainer>
       <Avatar src="https://github.com/diegofchagas.png" />
@@ -11,20 +26,20 @@ export const Comment = () => {
           <header>
             <div>
               <strong>Diego Chagas</strong>
-              <time>Cerca de 2h</time>
+              <time>{publishedCommentDate}</time>
             </div>
 
-            <button title="Deletar comentário">
+            <button onClick={onDeleteComment} title="Deletar comentário">
               <Trash size={24} />
             </button>
           </header>
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{content}</p>
         </S.CommentContent>
 
         <footer>
-          <button>
+          <button onClick={handleLikerCounter}>
             <ThumbsUp size={20}/>
-            Aplaudir <small>03</small>
+            Aplaudir <small>{likeCount}</small>
           </button>
         </footer>
       </S.BoxContainer>

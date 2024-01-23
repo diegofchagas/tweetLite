@@ -88,7 +88,7 @@ export const FormComment = styled.form`
     font-size: 1rem;
     font-family: "Roboto", sans-serif;
     outline: none;
-    margin: 1rem 0;
+    margin-top: 1rem;
     line-height: 140%;
   }
 
@@ -96,7 +96,17 @@ export const FormComment = styled.form`
     outline: 1px solid #00b37e;
   }
 
+  .alert-text:focus{
+    outline: 1px solid #F75A68;
+  }
+
+  .alert{
+    color:#F75A68;
+    font-size:.75rem;
+  }
+
   footer {
+    margin-top:1rem;
     visibility: hidden;
     max-height: 0;
   }
@@ -119,7 +129,12 @@ export const FormComment = styled.form`
     transition: background 1s;
   }
 
-  button:hover {
+  button:disabled{
+    opacity:0.4;
+    cursor: not-allowed;
+  }
+
+  button:not(:disabled):hover {
     background-color: #00b37e;
   }
 `;

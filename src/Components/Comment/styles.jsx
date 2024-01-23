@@ -27,6 +27,11 @@ export const BoxContainer = styled.div`
     display: flex;
     align-items: center;
   }
+
+  footer button:active{
+    color:#00B37E;
+  }
+
   footer button svg {
     margin-right: 0.5rem;
   }
