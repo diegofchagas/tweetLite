@@ -1,5 +1,6 @@
  ## 💻  Tweet Lite
 
+### 🔥 Introdução
 O Tweet Lite é uma plataforma colaborativa que permite que os usuários compartilhem posts e recebam feedback através de comentários construtivos. È um projeto ainda em construção que recebera algumas atualizações futuras.
 
 
@@ -36,7 +37,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 > npm run dev
 ```
 
-### Atualizações futuras
+### 🆙 Atualizações futuras
 
 - Criar uma api fake para consumidor os dados de usuários
 - Trazer a funcionalidade para o btn "editar perfil"
