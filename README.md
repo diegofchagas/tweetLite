@@ -2,9 +2,9 @@
 
 O Tweet Lite é uma plataforma colaborativa que permite que os usuários compartilhem posts e recebam feedback através de comentários construtivos. È um projeto ainda em construção que recebera algumas atualizações futuras.
 
-<div> 
-<img width="700" height="500" src ='../tweetLite/src/assets/tweetLite.png' >
-</div>
+
+<img width="700" height="500" src ="./src/assets/tweetLite.png" >
+
 
 
  ## :rocket: Tecnologias
